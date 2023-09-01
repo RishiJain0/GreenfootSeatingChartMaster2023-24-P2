@@ -103,7 +103,7 @@ public class Classroom extends World
         StudentDesk studentdesk32 = new StudentDesk();
         addObject(studentdesk32,6,10);
         TeacherDesk teacherdesk = new TeacherDesk();
-        addObject(teacherdesk,2,9);
+        addObject(teacherdesk,2,10);
         studentdesk31.setDeskGroup(1);
         studentdesk29.setDeskGroup(1);
         studentdesk30.setDeskGroup(1);
@@ -152,7 +152,11 @@ public class Classroom extends World
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
-  
+        
+        JadenDing jadending = new JadenDing();
+        addObject(jadending,2,6);
+        jadending.assignSeat();
+
     }
     
     public List<Student> getAllStudents(){
