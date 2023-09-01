@@ -54,8 +54,8 @@ public class Classroom extends World
         addObject(studentdesk7,2,7);
         StudentDesk studentdesk8 = new StudentDesk();
         addObject(studentdesk8,3,7);
-        StudentDesk studentdesk9 = new StudentDesk();
-        addObject(studentdesk9,5,3);
+        StudentDesk RishiJain = new StudentDesk();
+        addObject(RishiJain,5,3);
         StudentDesk studentdesk10 = new StudentDesk();
         addObject(studentdesk10,6,3);
         StudentDesk studentdesk11 = new StudentDesk();
@@ -127,7 +127,7 @@ public class Classroom extends World
         studentdesk3.setDeskGroup(6);
         studentdesk4.setDeskGroup(6);
         studentdesk2.setDeskGroup(6);
-        studentdesk9.setDeskGroup(7);
+        RishiJain.setDeskGroup(7);
         studentdesk11.setDeskGroup(7);
         studentdesk10.setDeskGroup(7);
         studentdesk12.setDeskGroup(7);
@@ -152,6 +152,8 @@ public class Classroom extends World
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
+        RishiJain rishi = new RishiJain();
+        addObject(rishi, 4, 3);
   
     }
     
