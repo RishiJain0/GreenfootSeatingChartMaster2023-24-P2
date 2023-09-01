@@ -153,9 +153,15 @@ public class Classroom extends World
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
         
+<<<<<<< HEAD
         RocketUzarraga rocketuzarraga = new  RocketUzarraga();
         addObject(rocketuzarraga,9,7);
         rocketuzarraga.assignSeat();
+=======
+        EashanMahajan eashan = new EashanMahajan();
+        addObject(eashan, 5, 7);
+        eashan.assignSeat();
+>>>>>>> e36c69b988a1ca2813c5ec0d20424338bfac1f7b
   
     }
     
