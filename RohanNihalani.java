@@ -66,7 +66,7 @@ public class RohanNihalani extends Student implements CSALearnedSoFar
                 getName();
                 sayName(soundFile);
             
-                LearnedSoFar("So far in CSA, I have learned how to code in Java and use the Greenfoot interface. This has allowed me to create cool games using the Greenfoot engine.");
+               
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
@@ -129,8 +129,8 @@ public class RohanNihalani extends Student implements CSALearnedSoFar
      * An interface is just a contract for the methods that you will implement in your code.  The College Board no longer
      * tests on abstract classes and interfaces, but it is good to know about them
      */
-     public void LearnedSoFar(String s) {
-         System.out.println(s);
+     public void LearnedSoFar() {
+         System.out.println("So far in CSA, I have learned how to code in Java and use the Greenfoot interface. This has allowed me to create cool games using the Greenfoot engine.");
 }
 
 }
