@@ -150,10 +150,15 @@ public class Classroom extends World
  // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
  // and then clicking on the inspect text
         KilgoreTrout kilgoretrout = new KilgoreTrout();
-        addObject(kilgoretrout,2,3);
+        addObject(kilgoretrout,3,4);
         kilgoretrout.assignSeat();
+
         GavinNgim gavinngim = new GavinNgim();
         addObject(gavinngim, 6, 9);
+        
+        EashanMahajan eashan = new EashanMahajan();
+        addObject(eashan, 5, 7);
+        eashan.assignSeat();
     }
     
     public List<Student> getAllStudents(){
