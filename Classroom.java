@@ -152,6 +152,10 @@ public class Classroom extends World
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
+        
+        JadenDing jadending = new JadenDing();
+        addObject(jadending,2,6);
+        jadending.assignSeat();
 
         RohanNihalani rohannihalani = new RohanNihalani();
         addObject(rohannihalani, 5,9);
@@ -167,7 +171,6 @@ public class Classroom extends World
         RocketUzarraga rocketuzarraga = new RocketUzarraga();
         addObject(rocketuzarraga,9,7);
         rocketuzarraga.assignSeat();
-  
     }
     
     public List<Student> getAllStudents(){
