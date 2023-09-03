@@ -160,6 +160,10 @@ public class Classroom extends World
         addObject(jadending,2,6);
         jadending.assignSeat();
 
+        PrathikAnkala prathikankala = new PrathikAnkala();
+        addObject(prathikankala,3,7);
+        prathikankala.assignSeat();
+        
         RohanNihalani rohannihalani = new RohanNihalani();
         addObject(rohannihalani, 5,9);
         rohannihalani.assignSeat();
