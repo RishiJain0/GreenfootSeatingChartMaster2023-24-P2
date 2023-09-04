@@ -21,5 +21,29 @@ public class StudentDeskGroup extends Actor
     public void act() 
     {
         // Add your action code here.
-    }    
+    }
+    
+    public void peopleNames(){
+        // Change everyone's names to those in your table group. You can adjust it to 3 people if need be.
+        EashanMahajan eashan = new EashanMahajan();
+        FranklinLiu franklin = new FranklinLiu();
+        GojoSatoru gojo = new GojoSatoru();
+        JiminLim jimin = new JiminLim();
+        
+        // Find their locations and record that and its name on these variables
+        String person1Name = eashan.firstName + eashan.lastName;
+        String person1Location = ("Their Location " + eashan.mySeatX + " " + eashan.mySeatY);
+        String person2Name = gojo.firstName + gojo.lastName;
+        String person2Location = ("Their location " + gojo.mySeatX + " " + gojo.mySeatY);
+        String person3Name = franklin.firstName + franklin.lastName;
+        String person3Location = ("Their location " + franklin.mySeatX + " " + franklin.mySeatY);
+        String person4Name = jimin.firstName + jimin.lastName;
+        String person4Location = ("Their location " + jimin.mySeatX + " " + jimin.mySeatY);
+        
+        // Print them out and then call the method in a different class, preferrably someone in your table group
+        System.out.println(person1Name + " " + person1Location);
+        System.out.println(person2Name + " " + person2Location);
+        System.out.println(person3Name + " " + person3Location);
+        System.out.println(person4Name + " " + person4Location);
+    }
 }
