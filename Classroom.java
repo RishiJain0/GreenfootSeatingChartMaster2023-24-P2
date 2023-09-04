@@ -237,10 +237,17 @@ public class Classroom extends World {
         addObject(kilgoretrout,2,3);
         kilgoretrout.assignSeat();
         
+        RocketUzarraga rocketuzarraga = new RocketUzarraga();
+        addObject(rocketuzarraga,9,7);
+        rocketuzarraga.assignSeat();
+        
+        RomirHiremath romirhiremath = new RomirHiremath();
+        addObject(romirhiremath,2,3);
+        romirhiremath.assignSeat();
+
         GargAyush gargAyush = new GargAyush();
         addObject(gargAyush, 3, 4);
         gargAyush.assignSeat();
-  
     }
     
     public List<Student> getAllStudents(){
