@@ -103,7 +103,7 @@ public class Classroom extends World
         StudentDesk studentdesk32 = new StudentDesk();
         addObject(studentdesk32,6,10);
         TeacherDesk teacherdesk = new TeacherDesk();
-        addObject(teacherdesk,2,9);
+        addObject(teacherdesk,2,10);
         studentdesk31.setDeskGroup(1);
         studentdesk29.setDeskGroup(1);
         studentdesk30.setDeskGroup(1);
@@ -151,11 +151,34 @@ public class Classroom extends World
  // and then clicking on the inspect text
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
+        
         kilgoretrout.assignSeat();
         AryanJain aryanjain = new AryanJain();
         addObject(aryanjain,6,3);
         aryanjain.assignSeat();
-  
+
+        TylerPrellwitz tylerprellwitz = new TylerPrellwitz();
+        addObject(tylerprellwitz,8,10);
+        tylerprellwitz.assignSeat();
+        
+        JadenDing jadending = new JadenDing();
+        addObject(jadending,2,6);
+        jadending.assignSeat();
+
+        RohanNihalani rohannihalani = new RohanNihalani();
+        addObject(rohannihalani, 5,9);
+        rohannihalani.assignSeat();
+
+        GavinNgim gavinngim = new GavinNgim();
+        addObject(gavinngim, 6, 9);
+        
+        EashanMahajan eashan = new EashanMahajan();
+        addObject(eashan, 5, 7);
+        eashan.assignSeat();
+        
+        RocketUzarraga rocketuzarraga = new RocketUzarraga();
+        addObject(rocketuzarraga,9,7);
+        rocketuzarraga.assignSeat();
     }
     
     public List<Student> getAllStudents(){
