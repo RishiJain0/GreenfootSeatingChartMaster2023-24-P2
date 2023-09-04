@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class TanayKotian extends Student implements SpecialInterestOrHobby, CSALearnedSoFar
+public class TanayKotian extends Student implements SpecialInterestOrHobby, CSALearnedSoFar, ListOfToDo
 {
 
     /**
@@ -68,6 +68,7 @@ public class TanayKotian extends Student implements SpecialInterestOrHobby, CSAL
             
                 myHobby("I like to play sports!");
                 LearnedSoFar();
+                ToDoList();
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
@@ -122,7 +123,13 @@ public class TanayKotian extends Student implements SpecialInterestOrHobby, CSAL
          System.out.println(s);
     }
      public void LearnedSoFar(){
-        System.out.println("I have learned java");
+        System.out.println("I have learned the syntax and basics about coding in Java");
     }
-
+    public void ToDoList(){
+        System.out.println("List of things to do: ");
+        System.out.println("1) Complete java project in 20 minutes");
+        System.out.println("2) Group up and collaborate with table mates");
+        System.out.println("3) Complete Warm up if not done already");
+        System.out.println("4) Put computers away");
+    }
 }

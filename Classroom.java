@@ -154,7 +154,6 @@ public class Classroom extends World
         kilgoretrout.assignSeat();
         TanayKotian tanaykotian = new TanayKotian();
         addObject(tanaykotian,5,4);
-        tanaykotian.assignSeat();
   
     }
     
