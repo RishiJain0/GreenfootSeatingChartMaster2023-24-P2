@@ -171,7 +171,7 @@ public class Classroom extends World {
     EashanMahajan eashan = new EashanMahajan();
     addObject(eashan, 5, 7);
     eashan.assignSeat();
-    
+
     GojoSatoru gojo = new GojoSatoru();
     addObject(gojo, 6, 7);
     gojo.assignSeat();
@@ -187,175 +187,36 @@ public class Classroom extends World {
     addObject(aryanjain, 6, 3);
     aryanjain.assignSeat();
 
+    JaydeLaderas jaydeladeras = new JaydeLaderas();
+    addObject(jaydeladeras, 6, 4);
+    jaydeladeras.assignSeat();
+
     JiminLim jiminlim = new JiminLim();
     addObject(jiminlim, 6, 6);
     jiminlim.assignSeat();
 
-  }
+    RomirHiremath romirhiremath = new RomirHiremath();
+    addObject(romirhiremath, 2, 3);
+    romirhiremath.assignSeat();
 
-  public List<Student> getAllStudents() {
-    List<Student> s = getObjects(Student.class);
-    return s;
-  }
+    GargAyush gargAyush = new GargAyush();
+    addObject(gargAyush, 3, 4);
+    gargAyush.assignSeat();
 
-  /**
-   * gets a list of all students, and creates a new file that can be cut/pasted in
-   * as a prepare statement.
-   * 
-   */
-  public void createNewSeatingChart() {
-    boolean lastWrite;
-    String timestamp = DateFormatter.makeDate();
+    JiaAggarwal jia = new JiaAggarwal();
+    addObject(jia, 2, 7);
+    jia.assignSeat();
 
-    String newChartFile = "seatingchart-" + timestamp + ".txt";
+    AnjaliZalani anjalizalani = new AnjaliZalani();
+    addObject(anjalizalani, 8, 4);
+    anjalizalani.assignSeat();
 
-    List<Student> students = getObjects(Student.class);
+    ToniEn tonien = new ToniEn();
+    addObject(tonien, 2, 4);
+    tonien.assignSeat();
 
-    for (Student s : students) {
-      String studentClassName = s.getFirstName() + s.getLastName();
-
-      String studentInstanceVar = studentClassName.toLowerCase();
-      String instantiate = studentClassName + " " + studentInstanceVar + " = new " + studentClassName + "(); \n";
-      String placeStudent = "addObject(" + studentInstanceVar + "," + s.getX() + "," + s.getY() + "); \n";
-      String assignSeat = studentInstanceVar + ".assignSeat();\n\n";
-
-      appendFile(newChartFile, instantiate);
-      appendFile(newChartFile, placeStudent);
-      appendFile(newChartFile, assignSeat);
-
-    }
-    Greenfoot.ask("Your file has been saved as: " + newChartFile + "     -Press [Enter] to continue.");
-
-  }
-
-  // modified from
-  // https://beginnersbook.com/2014/01/how-to-append-to-a-file-in-java/
-
-  public void appendFile(String fname, String s) {
-    {
-        createDeskLayout();
- // Each student needs to create their specific instance following the KilgoreTrout example.
- // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
- // and then clicking on the inspect text
-        KilgoreTrout kilgoretrout = new KilgoreTrout();
-        addObject(kilgoretrout,2,3);
-        kilgoretrout.assignSeat();
-        TanayKotian tanaykotian = new TanayKotian();
-        addObject(tanaykotian,5,4);
-  
-
-        TylerPrellwitz tylerprellwitz = new TylerPrellwitz();
-        addObject(tylerprellwitz,8,10);
-        tylerprellwitz.assignSeat();
-        
-        JadenDing jadending = new JadenDing();
-        addObject(jadending,2,6);
-        jadending.assignSeat();
-
-        PrathikAnkala prathikankala = new PrathikAnkala();
-        addObject(prathikankala,3,7);
-        prathikankala.assignSeat();
-        
-        RohanNihalani rohannihalani = new RohanNihalani();
-        addObject(rohannihalani, 5,9);
-        rohannihalani.assignSeat();
-
-        GavinNgim gavinngim = new GavinNgim();
-        addObject(gavinngim, 6, 9);
-        
-        EashanMahajan eashan = new EashanMahajan();
-        addObject(eashan, 5, 7);
-        eashan.assignSeat();
-        
-        RocketUzarraga rocketuzarraga = new RocketUzarraga();
-        addObject(rocketuzarraga,9,7);
-        rocketuzarraga.assignSeat();
-        
-        RomirHiremath romirhiremath = new RomirHiremath();
-        addObject(romirhiremath,2,3);
-        romirhiremath.assignSeat();
-
-        GargAyush gargAyush = new GargAyush();
-        addObject(gargAyush, 3, 4);
-        gargAyush.assignSeat();
-
-    }
-    
-    public List<Student> getAllStudents(){
-       List<Student> s = getObjects(Student.class);  
-       return s;
-    }
-    
-  
-    /**
-     * gets a list of all students, and creates a new file that can be cut/pasted in as a prepare statement.
-     * 
-     */
-    public void createNewSeatingChart(){
-        boolean lastWrite;
-        String timestamp=DateFormatter.makeDate();
-      
-        String newChartFile="seatingchart-" + timestamp + ".txt";   
-        
-        List<Student> students = getObjects(Student.class); 
-        
-        for (Student s:students){
-            String studentClassName=s.getFirstName()+s.getLastName(); 
-            
-            String studentInstanceVar=studentClassName.toLowerCase();
-            String instantiate=studentClassName + " " + studentInstanceVar + " = new " + studentClassName + "(); \n";
-            String placeStudent="addObject(" + studentInstanceVar + ","+ s.getX() + "," + s.getY()+"); \n";
-            String assignSeat = studentInstanceVar + ".assignSeat();\n\n";
-           
-            appendFile(newChartFile,instantiate);
-            appendFile(newChartFile,placeStudent);  
-            appendFile(newChartFile,assignSeat);
-            
-        }
-        Greenfoot.ask("Your file has been saved as: "+newChartFile+"     -Press [Enter] to continue.");
-    
-    }
-    
- 
-    
-    // modified from https://beginnersbook.com/2014/01/how-to-append-to-a-file-in-java/
-    
-
-   public  void appendFile(String fname, String s){
-   {    
-      try{
-         
-        //Specify the file name and path here
-        File file =new File(fname);
-
-        /* This logic is to create the file if the
-      try {
-
-        // Specify the file name and path here
-        File file = new File(fname);
-
-        /*
-         * This logic is to create the file if the
-         * file is not already present
-         */
-        if (!file.exists()) {
-          file.createNewFile();
-        }
-
-        // Here true is to append the content to file
-        FileWriter fw = new FileWriter(file, true);
-        // BufferedWriter writer give better performance
-        BufferedWriter bw = new BufferedWriter(fw);
-        bw.write(s);
-        // Closing BufferedWriter Stream
-        bw.close();
-
-        System.out.println("Data successfully appended at the end of file");
-
-      } catch (IOException ioe) {
-        System.out.println("Exception occurred:");
-        ioe.printStackTrace();
-      }
-    }
+    TanayKotian tanaykotian = new TanayKotian();
+    addObject(tanaykotian, 5, 4);
+    tanaykotian.assignSeat();
   }
 }
