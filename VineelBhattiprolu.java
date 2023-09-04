@@ -1,11 +1,8 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The KilgoreTrout class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
- * @author Mr. Kaehms
- * @version 2.0 Aug 13, 2019
- * @version 3.0 July 21, 2020
+ * @author Vineel Bhattiprolu
  */
 public class VineelBhattiprolu extends Student implements SpecialInterestOrHobby
 {
