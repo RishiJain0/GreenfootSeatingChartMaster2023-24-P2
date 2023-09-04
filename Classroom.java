@@ -218,5 +218,9 @@ public class Classroom extends World {
     VineelBhattiprolu vineel = new VineelBhattiprolu();
     addObject(vineel, 3, 6);
     vineel.assignSeat();
+
+    TanayKotian tanaykotian = new TanayKotian();
+    addObject(tanaykotian, 5, 4);
+    tanaykotian.assignSeat();
   }
 }
