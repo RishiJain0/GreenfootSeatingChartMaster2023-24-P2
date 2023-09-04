@@ -208,5 +208,9 @@ public class Classroom extends World {
     addObject(jia, 2, 7);
     jia.assignSeat();
 
+
+    AnjaliZalani anjalizalani = new AnjaliZalani();
+    addObject(anjalizalani, 8, 4);
+    anjalizalani.assignSeat();
   }
 }
