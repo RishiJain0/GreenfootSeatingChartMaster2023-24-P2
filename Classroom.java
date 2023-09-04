@@ -214,5 +214,9 @@ public class Classroom extends World {
     ToniEn tonien = new ToniEn();
     addObject(tonien, 2, 4);
     tonien.assignSeat();
+
+    TanayKotian tanaykotian = new TanayKotian();
+    addObject(tanaykotian, 5, 4);
+    tanaykotian.assignSeat();
   }
 }
