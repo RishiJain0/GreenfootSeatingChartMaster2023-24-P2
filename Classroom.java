@@ -174,6 +174,10 @@ public class Classroom extends World
         RocketUzarraga rocketuzarraga = new RocketUzarraga();
         addObject(rocketuzarraga,9,7);
         rocketuzarraga.assignSeat();
+        
+        ToniEn tonien = new ToniEn();
+        addObject(tonien, 2, 4);
+        tonien.assignSeat();
     }
     
     public List<Student> getAllStudents(){
