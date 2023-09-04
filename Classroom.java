@@ -174,6 +174,10 @@ public class Classroom extends World
         RocketUzarraga rocketuzarraga = new RocketUzarraga();
         addObject(rocketuzarraga,9,7);
         rocketuzarraga.assignSeat();
+
+        AnjaliZalani anjalizalani = new AnjaliZalani();
+        addObject(anjalizalani, 8,4);
+        anjalizalani.assignSeat();
     }
     
     public List<Student> getAllStudents(){
