@@ -186,11 +186,10 @@ public class Classroom extends World {
     AryanJain aryanjain = new AryanJain();
     addObject(aryanjain, 6, 3);
     aryanjain.assignSeat();
-    
+
     JaydeLaderas jaydeladeras = new JaydeLaderas();
-    addObject(jaydeladeras,6,4);
+    addObject(jaydeladeras, 6, 4);
     jaydeladeras.assignSeat();
-    
 
     JiminLim jiminlim = new JiminLim();
     addObject(jiminlim, 6, 6);
@@ -203,14 +202,17 @@ public class Classroom extends World {
     GargAyush gargAyush = new GargAyush();
     addObject(gargAyush, 3, 4);
     gargAyush.assignSeat();
-    
+
     JiaAggarwal jia = new JiaAggarwal();
     addObject(jia, 2, 7);
     jia.assignSeat();
 
-
     AnjaliZalani anjalizalani = new AnjaliZalani();
     addObject(anjalizalani, 8, 4);
     anjalizalani.assignSeat();
+
+    ToniEn tonien = new ToniEn();
+    addObject(tonien, 2, 4);
+    tonien.assignSeat();
   }
 }
