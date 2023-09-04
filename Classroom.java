@@ -186,6 +186,11 @@ public class Classroom extends World {
     AryanJain aryanjain = new AryanJain();
     addObject(aryanjain, 6, 3);
     aryanjain.assignSeat();
+    
+    JaydeLaderas jaydeladeras = new JaydeLaderas();
+    addObject(jaydeladeras,6,4);
+    jaydeladeras.assignSeat();
+    
 
     JiminLim jiminlim = new JiminLim();
     addObject(jiminlim, 6, 6);
