@@ -183,6 +183,10 @@ public class Classroom extends World {
     addObject(aryanjain, 6, 3);
     aryanjain.assignSeat();
 
+    JiminLim jiminlim = new JiminLim();
+    addObject(jiminlim, 6, 6);
+    jiminlim.assignSeat();
+
   }
 
   public List<Student> getAllStudents() {
