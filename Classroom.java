@@ -229,6 +229,68 @@ public class Classroom extends World {
 
   public void appendFile(String fname, String s) {
     {
+        createDeskLayout();
+ // Each student needs to create their specific instance following the KilgoreTrout example.
+ // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
+ // and then clicking on the inspect text
+        KilgoreTrout kilgoretrout = new KilgoreTrout();
+        addObject(kilgoretrout,2,3);
+        kilgoretrout.assignSeat();
+        
+        GargAyush gargAyush = new GargAyush();
+        addObject(gargAyush, 3, 4);
+        gargAyush.assignSeat();
+  
+    }
+    
+    public List<Student> getAllStudents(){
+       List<Student> s = getObjects(Student.class);  
+       return s;
+    }
+    
+  
+    /**
+     * gets a list of all students, and creates a new file that can be cut/pasted in as a prepare statement.
+     * 
+     */
+    public void createNewSeatingChart(){
+        boolean lastWrite;
+        String timestamp=DateFormatter.makeDate();
+      
+        String newChartFile="seatingchart-" + timestamp + ".txt";   
+        
+        List<Student> students = getObjects(Student.class); 
+        
+        for (Student s:students){
+            String studentClassName=s.getFirstName()+s.getLastName(); 
+            
+            String studentInstanceVar=studentClassName.toLowerCase();
+            String instantiate=studentClassName + " " + studentInstanceVar + " = new " + studentClassName + "(); \n";
+            String placeStudent="addObject(" + studentInstanceVar + ","+ s.getX() + "," + s.getY()+"); \n";
+            String assignSeat = studentInstanceVar + ".assignSeat();\n\n";
+           
+            appendFile(newChartFile,instantiate);
+            appendFile(newChartFile,placeStudent);  
+            appendFile(newChartFile,assignSeat);
+            
+        }
+        Greenfoot.ask("Your file has been saved as: "+newChartFile+"     -Press [Enter] to continue.");
+    
+    }
+    
+ 
+    
+    // modified from https://beginnersbook.com/2014/01/how-to-append-to-a-file-in-java/
+    
+
+   public  void appendFile(String fname, String s){
+   {    
+      try{
+         
+        //Specify the file name and path here
+        File file =new File(fname);
+
+        /* This logic is to create the file if the
       try {
 
         // Specify the file name and path here
