@@ -239,7 +239,29 @@ public class Classroom extends World {
  // and then clicking on the inspect text
         KilgoreTrout kilgoretrout = new KilgoreTrout();
         addObject(kilgoretrout,2,3);
-        kilgoretrout.assignSeat();
+
+        TylerPrellwitz tylerprellwitz = new TylerPrellwitz();
+        addObject(tylerprellwitz,8,10);
+        tylerprellwitz.assignSeat();
+        
+        JadenDing jadending = new JadenDing();
+        addObject(jadending,2,6);
+        jadending.assignSeat();
+
+        PrathikAnkala prathikankala = new PrathikAnkala();
+        addObject(prathikankala,3,7);
+        prathikankala.assignSeat();
+        
+        RohanNihalani rohannihalani = new RohanNihalani();
+        addObject(rohannihalani, 5,9);
+        rohannihalani.assignSeat();
+
+        GavinNgim gavinngim = new GavinNgim();
+        addObject(gavinngim, 6, 9);
+        
+        EashanMahajan eashan = new EashanMahajan();
+        addObject(eashan, 5, 7);
+        eashan.assignSeat();
         
         RocketUzarraga rocketuzarraga = new RocketUzarraga();
         addObject(rocketuzarraga,9,7);
