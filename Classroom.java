@@ -171,6 +171,10 @@ public class Classroom extends World {
     EashanMahajan eashan = new EashanMahajan();
     addObject(eashan, 5, 7);
     eashan.assignSeat();
+    
+    GojoSatoru gojo = new GojoSatoru();
+    addObject(gojo, 6, 7);
+    gojo.assignSeat();
 
     RocketUzarraga rocketuzarraga = new RocketUzarraga();
     addObject(rocketuzarraga, 9, 7);
