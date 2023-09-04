@@ -179,6 +179,9 @@ public class Classroom extends World {
     FranklinLiu franklinLiu = new FranklinLiu();
     addObject(franklinLiu, 5, 6);
     franklinLiu.assignSeat();
+    AryanJain aryanjain = new AryanJain();
+    addObject(aryanjain, 6, 3);
+    aryanjain.assignSeat();
 
   }
 
