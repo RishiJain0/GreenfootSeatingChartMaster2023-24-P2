@@ -198,6 +198,10 @@ public class Classroom extends World {
     GargAyush gargAyush = new GargAyush();
     addObject(gargAyush, 3, 4);
     gargAyush.assignSeat();
+    
+    JiaAggarwal jia = new JiaAggarwal();
+    addObject(jia, 2, 7);
+    jia.assignSeat();
 
   }
 }
