@@ -224,7 +224,7 @@ public class Classroom extends World {
     tanaykotian.assignSeat();
 
     ConnorTK connorTK = new ConnorTK();
-    addObject(connorTK,8,7);
-    ConnorTK.assignSeat();
+    addObject(connorTK, 8, 7);
+    connorTK.assignSeat();
   }
 }
