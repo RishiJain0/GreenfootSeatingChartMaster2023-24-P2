@@ -222,5 +222,9 @@ public class Classroom extends World {
     TanayKotian tanaykotian = new TanayKotian();
     addObject(tanaykotian, 5, 4);
     tanaykotian.assignSeat();
+
+    ConnorTK connorTK = new ConnorTK();
+    addObject(connorTK, 8, 7);
+    connorTK.assignSeat();
   }
 }
