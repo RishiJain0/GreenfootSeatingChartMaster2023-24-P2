@@ -33,23 +33,39 @@ public class Table7Button extends Actor
     
     private void eject() {
         int index = Greenfoot.getRandomNumber(tableMembers.length);
+        int impostor = Greenfoot.getRandomNumber(2);
         Student ejected = tableMembers[index];
         int direction;
+        String ejectMsg;
         
         if (ejected.getY() == 7) {
             direction = 1;
         } else {
             direction = -1;
         }
+        if (impostor == 1) {
+            ejectMsg = ejected.firstName + " was the The Impostor";
+        } else {
+            ejectMsg = ejected.firstName + " was not the The Impostor";
+        }
         
         Greenfoot.playSound(meetingSound);
         Greenfoot.delay(100);
-        Greenfoot.playSound(ejectSound);
         
+        int transparency = 230;
         while(!ejected.isAtEdge()) {
             ejected.setLocation(ejected.getX(), ejected.getY()+direction);
-            Greenfoot.delay(20);
+            ejected.getImage().setTransparency(transparency);
+            transparency -= 25;
+            Greenfoot.delay(10);
         }
+        
+        Greenfoot.playSound(ejectSound);
+        for (int i = 0; i < ejectMsg.length(); i++) {
+            System.out.print(ejectMsg.substring(i,i+1));
+            Greenfoot.delay(3);
+        }
+        System.out.println(".");
         
         ejected.getImage().setTransparency(0);
         Greenfoot.delay(100);
