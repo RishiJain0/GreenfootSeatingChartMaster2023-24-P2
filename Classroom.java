@@ -156,6 +156,10 @@ public class Classroom extends World
         EashanMahajan eashan = new EashanMahajan();
         addObject(eashan, 5, 7);
         eashan.assignSeat();
+        
+        AltaWan altawan = new AltaWan();
+        addObject(altawan,8,6);
+        altawan.assignSeat();
   
     }
     
