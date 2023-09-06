@@ -227,6 +227,6 @@ public class Classroom extends World {
     addObject(connorTK, 8, 7);
     connorTK.assignSeat();
     
-    Table7Button button7 = new Table7Button(new Student[] {rocketuzarraga, connorTK});
+    MeetingButton button7 = new MeetingButton(new Student[] {rocketuzarraga, connorTK});
     addObject(button7, 10, 7);}
 }
