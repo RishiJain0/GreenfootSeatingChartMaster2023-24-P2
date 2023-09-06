@@ -75,6 +75,7 @@ public class StudentDeskGroup extends Actor
         
         // Play the button sound
         Greenfoot.playSound("sounds/meeting.wav");
+        System.out.println("EMERGENCY MEETING");
         Greenfoot.delay(75);
         
         // Eject the student, moving up or down accordingly and slowly fading away
@@ -98,7 +99,7 @@ public class StudentDeskGroup extends Actor
         // Return to seat and fade back
         Greenfoot.delay(100);
         ejected.returnToSeat();
-        for (int i = 0; i <= 255; i+=5) {
+        for (int i = 0; i <= 255; i += 17) {
             ejected.getImage().setTransparency(i);
             Greenfoot.delay(2);
         }
