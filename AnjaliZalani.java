@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class KilgoreTrout extends Student implements SpecialInterestOrHobby
+public class AnjaliZalani extends Student implements SpecialInterestOrHobby
 {
 
     /**
@@ -22,12 +22,12 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public KilgoreTrout(String f, String l, int r, int s) {
+    public AnjaliZalani(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         mySeatX=r;
         mySeatY=s;
-        portraitFile=f.toLowerCase()+l.toLowerCase()+".jpg";    // Make sure to name your image files firstlast.jpg, all lowercase!!!
+        portraitFile=f.toLowerCase()+l.toLowerCase()+".jpg";   // Make sure to name your image files firstlast.jpg, all lowercase!!!
         standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=f.toLowerCase()+l.toLowerCase()+".wav";  // Make sure to name your sound files firstlast.wav, all lowercase!!!
         setImage(portraitFile);
@@ -38,16 +38,18 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public KilgoreTrout() {
-        firstName="Kilgore";
-        lastName="Trout";
-        mySeatX=2;
-        mySeatY=2;
-       // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+    //<<<<<<< HEAD:AnjaliZalani.java
+    public AnjaliZalani() {
+        firstName="Anjali";
+        lastName="Zalani";
+        mySeatX=1;
+        mySeatY=1;
+        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
-        soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
-        setImage(portraitFile);
+       soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
+       setImage(portraitFile);
+        //portraitFile.scale(portraitFile.getWidth()*10/100, portraitFile.getHeight()*percent/100);
         sitting=true;
     }
     
@@ -66,7 +68,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to time travel!");
+                myHobby("I like to spend time with my pet, Latte!");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
@@ -98,27 +100,41 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      */
     public void circleClass(){
         setLocation(0,0);
-         Greenfoot.delay(10);
+        Greenfoot.delay(10);
+        int x = 90;
         // move right
-        for (int i=1;i<=9;i++){
+        for (int i=1;i<=20;i++){
             setLocation(i,0);
+            setRotation(x);
+            x+= 45;
             Greenfoot.delay(10);
         }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
+        
+        for (int i=1;i<=11;i++){
+            setLocation(20,i);
+            setRotation(x);
+            x-= 45;
             Greenfoot.delay(10);
-        }      
+        }  
+
+        
+        // move back
+            
          // move left
-        for (int i=9;i>=0;i--){
-            setLocation(i,5);
+        for (int i=11;i>=0;i--){
+            setLocation(i,11);
+            setRotation(x);
+            x+= 45;
             Greenfoot.delay(10);
         }      
               // move Forward
-        for (int i=5;i>=0;i--){
+        for (int i=11;i>=0;i--){
             setLocation(0,i);
+            setRotation(x);
+            x-= 45;
             Greenfoot.delay(10);
         }   
+           setRotation(0);
            Greenfoot.delay(20);
            returnToSeat();
     }

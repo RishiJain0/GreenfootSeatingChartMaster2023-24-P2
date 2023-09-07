@@ -22,7 +22,13 @@ public class StudentDesk extends Actor
            deskGroup=i;
         }
      public int getDeskGroup(){
-        
            return deskGroup;
         }
+    /* The seatingReqs method can be used to collect user input for seating requirements.
+     * It can be called in the Classroom world when necessary.
+     */
+    public String seatingReqs(){
+        String reqs = Greenfoot.ask("Do you have any seating requirements?");
+        return reqs;
+    }
 }
