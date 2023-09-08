@@ -10,32 +10,33 @@ import java.io.IOException;
 import java.io.FileNotFoundException;
 //import java.util.List;
 //import java.util.Arrays;
- // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
- 
+// (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
 /**
  * Write a description of class Classroom here.
  * 
- * @author Mr. Kaehms 
- * @version 2.0  Note: updated for new desk layout. Goal is to make setting seats easy
+ * @author Mr. Kaehms
+ * @version 2.0 Note: updated for new desk layout. Goal is to make setting seats
+ *          easy
  */
-public class Classroom extends World
-{
-    private ArrayList<Object> listo = new ArrayList<Object>();
-    /**
-     * Constructor for objects of class Classroom.
-     * 
-     */
-    public Classroom()
-    {    
-        // Create a new world with 10x6 cells with a cell size of 130x130 pixels.
-        super(14, 14, 60); 
+public class Classroom extends World {
+  private ArrayList<Object> listo = new ArrayList<Object>();
 
-        prepare();
-    }
+  /**
+   * Constructor for objects of class Classroom.
+   * 
+   */
+  public Classroom() {
+    // Create a new world with 10x6 cells with a cell size of 130x130 pixels.
+    super(14, 14, 60);
 
-    /**
-     * Prepare the classroom desk layout.  This method should not be chanaged!. Refactored from prepare method.
-     */
+    prepare();
+  }
+
+  /**
+   * Prepare the classroom desk layout. This method should not be chanaged!.
+   * Refactored from prepare method.
+   */
 
     private void createDeskLayout(){
         StudentDesk studentdesk = new StudentDesk();
@@ -145,88 +146,76 @@ public class Classroom extends World
     
     private void prepare()
     {
-        createDeskLayout();
+      createDeskLayout();
  // Each student needs to create their specific instance following the KilgoreTrout example.
  // Your current seatX and seatY can be found by right clicking on the corresponding seat in the Classrom.
  // and then clicking on the inspect text
-        KilgoreTrout kilgoretrout = new KilgoreTrout();
-        addObject(kilgoretrout,2,3);
-        kilgoretrout.assignSeat();
-        
-        AyushiGhosh ayushighosh = new AyushiGhosh();
-        addObject(ayushighosh, 3,3);
-        ayushighosh.assignSeat();
-  
-    }
+      KilgoreTrout kilgoretrout = new KilgoreTrout();
+      addObject(kilgoretrout,2,3);
+      kilgoretrout.assignSeat();
     
-    public List<Student> getAllStudents(){
-       List<Student> s = getObjects(Student.class);  
-       return s;
-    }
-    
-  
-    /**
-     * gets a list of all students, and creates a new file that can be cut/pasted in as a prepare statement.
-     * 
-     */
-    public void createNewSeatingChart(){
-        boolean lastWrite;
-        String timestamp=DateFormatter.makeDate();
+      AyushiGhosh ayushighosh = new AyushiGhosh();
+      addObject(ayushighosh, 3,3);
+      ayushighosh.assignSeat();
       
-        String newChartFile="seatingchart-" + timestamp + ".txt";   
-        
-        List<Student> students = getObjects(Student.class); 
-        
-        for (Student s:students){
-            String studentClassName=s.getFirstName()+s.getLastName(); 
-            
-            String studentInstanceVar=studentClassName.toLowerCase();
-            String instantiate=studentClassName + " " + studentInstanceVar + " = new " + studentClassName + "(); \n";
-            String placeStudent="addObject(" + studentInstanceVar + ","+ s.getX() + "," + s.getY()+"); \n";
-            String assignSeat = studentInstanceVar + ".assignSeat();\n\n";
-           
-            appendFile(newChartFile,instantiate);
-            appendFile(newChartFile,placeStudent);  
-            appendFile(newChartFile,assignSeat);
-            
-        }
-        Greenfoot.ask("Your file has been saved as: "+newChartFile+"     -Press [Enter] to continue.");
-    
-    }
-    
- 
-    
-    // modified from https://beginnersbook.com/2014/01/how-to-append-to-a-file-in-java/
-    
+      AltaWan altawan = new AltaWan();
+      addObject(altawan,8,6);
+      altawan.assignSeat();
 
-   public  void appendFile(String fname, String s){
-   {    
-      try{
-         
-        //Specify the file name and path here
-        File file =new File(fname);
+      GojoSatoru gojo = new GojoSatoru();
+      addObject(gojo, 6, 7);
+      gojo.assignSeat();
 
-        /* This logic is to create the file if the
-         * file is not already present
-         */
-        if(!file.exists()){
-           file.createNewFile();
-        }
+      RocketUzarraga rocketuzarraga = new RocketUzarraga();
+      addObject(rocketuzarraga, 9, 7);
+      rocketuzarraga.assignSeat();
 
-        //Here true is to append the content to file
-        FileWriter fw = new FileWriter(file,true);
-        //BufferedWriter writer give better performance
-        BufferedWriter bw = new BufferedWriter(fw);
-        bw.write(s);
-        //Closing BufferedWriter Stream
-        bw.close();
+      FranklinLiu franklinLiu = new FranklinLiu();
+      addObject(franklinLiu, 5, 6);
+      franklinLiu.assignSeat();
 
-    System.out.println("Data successfully appended at the end of file");
+      AryanJain aryanjain = new AryanJain();
+      addObject(aryanjain, 6, 3);
+      aryanjain.assignSeat();
 
-      }catch(IOException ioe){
-         System.out.println("Exception occurred:");
-         ioe.printStackTrace();
-       }
-   }
-}
+      JaydeLaderas jaydeladeras = new JaydeLaderas();
+      addObject(jaydeladeras, 6, 4);
+      jaydeladeras.assignSeat();
+
+      JiminLim jiminlim = new JiminLim();
+      addObject(jiminlim, 6, 6);
+      jiminlim.assignSeat();
+
+      RomirHiremath romirhiremath = new RomirHiremath();
+      addObject(romirhiremath, 2, 3);
+      romirhiremath.assignSeat();
+
+      GargAyush gargAyush = new GargAyush();
+      addObject(gargAyush, 3, 4);
+      gargAyush.assignSeat();
+
+      JiaAggarwal jia = new JiaAggarwal();
+      addObject(jia, 2, 7);
+      jia.assignSeat();
+
+      AnjaliZalani anjalizalani = new AnjaliZalani();
+      addObject(anjalizalani, 8, 4);
+      anjalizalani.assignSeat();
+
+      ToniEn tonien = new ToniEn();
+      addObject(tonien, 2, 4);
+      tonien.assignSeat();
+
+      VineelBhattiprolu vineel = new VineelBhattiprolu();
+      addObject(vineel, 3, 6);
+      vineel.assignSeat();
+
+      TanayKotian tanaykotian = new TanayKotian();
+      addObject(tanaykotian, 5, 4);
+      tanaykotian.assignSeat();
+
+      ConnorTK connorTK = new ConnorTK();
+      addObject(connorTK, 8, 7);
+      connorTK.assignSeat();
+  }
 }
