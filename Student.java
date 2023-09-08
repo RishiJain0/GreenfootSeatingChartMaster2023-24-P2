@@ -68,6 +68,21 @@ public abstract class Student extends Actor
     public void assignSeat(){
         mySeatX=getX();
         mySeatY=getY();
+    } 
+    
+    /** Generates a String list of interfaces a given person has implmented. This is useful to 
+       see which interfaces someone has implemented before running methods on them.*/
+    public ArrayList<String> interfacesImplemented() {
+        Class[] interfaces = new Class[]{CSALearnedSoFar.class, NumberOfSiblings.class, SpecialInterestOrHobby.class, StudentAthlete.class, StudentLeadership.class};
+        String[] interfaceNames = new String[]{"CSALearnedSoFar", "NumberOfSiblings", "SpecialInterestOrHobby", "StudentAthlete", "StudentLeadership"};
+        
+        ArrayList<String> output = new ArrayList();
+        for (int i = 0; i < interfaces.length; i++) {
+            if (interfaces[i].isAssignableFrom(this.getClass())) {
+                output.add(interfaceNames[i]);
+            }
+        }
+        
+        return output;
     }
- 
 }

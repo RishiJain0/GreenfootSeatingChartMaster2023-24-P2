@@ -3,15 +3,15 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * The KilgoreTrout class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
- * @author Mr. Kaehms
+ * @author Ayush Garg
  * @version 2.0 Aug 13, 2019
  * @version 3.0 July 21, 2020
  */
-public class KilgoreTrout extends Student implements SpecialInterestOrHobby
+public class GargAyush extends Student implements SpecialInterestOrHobby, NumberOfSiblings
 {
 
     /**
-     * Constructor for the KilgoreTrout class.
+     * Constructor for the GargAyush class.
      * Constructors are special methods with the same exact name as the class name.  
      * Constructors to not have return types.
      * Constructors can be overloaded. This means we can call a constructor with different sets of parameter
@@ -22,7 +22,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public KilgoreTrout(String f, String l, int r, int s) {
+    public GargAyush(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         mySeatX=r;
@@ -38,14 +38,14 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public KilgoreTrout() {
-        firstName="Kilgore";
-        lastName="Trout";
-        mySeatX=2;
-        mySeatY=2;
-       // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
-       standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
+    public GargAyush() {
+        firstName="Ayush";
+        lastName="Garg";
+        mySeatX=3;
+        mySeatY=4;
+        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
+        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
         soundFile=firstName.toLowerCase()+ lastName.toLowerCase()+".wav";
         setImage(portraitFile);
         sitting=true;
@@ -56,7 +56,7 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * the 'Act' or 'Run' button gets pressed in the environment.
      */   
     public void act() 
-    {
+    {        
         // Add your action code here.
         if(Greenfoot.mouseClicked(this)){
           //  if (sitting){
@@ -66,14 +66,17 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to time travel!");
-            // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
+                myHobby("I love programming and listening to music!");
+                System.out.println("I have " + numberOfSiblings() + " sibling(s) (" + numberOfBrothers() + " brother(s) and " + numberOfSisters() + " sister(s))");
+                System.out.println("Interfaces implemented: " + interfacesImplemented());
+                // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
-                circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+                animate();
            
                 sitDown();
+                
             }
         
     } 
@@ -90,37 +93,38 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      * with some additional class and object that represents a blackboard, or a talking cartoon bubble etc. If you provide extra
      * classes, make sure to fully document so other students can use the same interface.
      */
+    
+    
+    
 
    
     /**
      * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void circleClass(){
-        setLocation(0,0);
-         Greenfoot.delay(10);
-        // move right
-        for (int i=1;i<=9;i++){
-            setLocation(i,0);
-            Greenfoot.delay(10);
+    public void animate(){
+        setLocation(1,5);
+        Greenfoot.delay(10);
+        // move in a sine wave for 30 seconds
+        
+        for (int t = 0; t < 2; t++) {
+            for (double i = 2; i <= 11; i++) {
+                double value = 5.0 * Math.sin(Math.PI / 2.0 * (double)(i + 1)) + 5.0;
+                setLocation((int)Math.floor(i), (int)Math.floor(value));
+                
+                Greenfoot.delay(15);
+            }
+            
+            for (double i = 10; i >= 1; i--) {
+                double value = 5.0 * Math.sin(Math.PI / 2.0 * (double)(i + 1)) + 5.0;
+                setLocation((int)Math.floor(i), (int)Math.floor(value));
+                
+                Greenfoot.delay(15);
+            }
         }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
-            Greenfoot.delay(10);
-        }      
-         // move left
-        for (int i=9;i>=0;i--){
-            setLocation(i,5);
-            Greenfoot.delay(10);
-        }      
-              // move Forward
-        for (int i=5;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
-           Greenfoot.delay(20);
-           returnToSeat();
+        
+        Greenfoot.delay(20);
+        returnToSeat();
     }
      /**
      * myHobby is one of the interfaces provided.  
@@ -129,6 +133,17 @@ public class KilgoreTrout extends Student implements SpecialInterestOrHobby
      */
      public void myHobby(String s) {
          System.out.println(s);
-}
-
+    }
+    
+    public int numberOfSiblings() {
+        return 1;
+    }
+    
+    public int numberOfBrothers() {
+        return 0;
+    }
+    
+    public int numberOfSisters() {
+        return 1;
+    }
 }
