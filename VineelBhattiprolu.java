@@ -1,17 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * The EashanMahajan class can be used as a model for your own class that represents you and your seating location in AP CSA
  * 
- * @author Mr. Kaehms
- * @version 2.0 Aug 13, 2019
- * @version 3.0 July 21, 2020
+ * @author Vineel Bhattiprolu
  */
-public class EashanMahajan extends Student implements SpecialInterestOrHobby
+public class VineelBhattiprolu extends Student implements SpecialInterestOrHobby
 {
 
     /**
-     * Constructor for the EashanMahajan class.
+     * Constructor for the KilgoreTrout class.
      * Constructors are special methods with the same exact name as the class name.  
      * Constructors to not have return types.
      * Constructors can be overloaded. This means we can call a constructor with different sets of parameter
@@ -22,7 +19,7 @@ public class EashanMahajan extends Student implements SpecialInterestOrHobby
      * @param int s (seat number within row seating arrangement)
      * 
      */
-    public EashanMahajan(String f, String l, int r, int s) {
+    public VineelBhattiprolu(String f, String l, int r, int s) {
         firstName=f;
         lastName=l;
         mySeatX=r;
@@ -38,11 +35,11 @@ public class EashanMahajan extends Student implements SpecialInterestOrHobby
      * Pay attention to how the row and seat variables set the location of the image.  1,1 is the first cell in the upper left
      * of the classroom.
      */
-    public EashanMahajan() {
-        firstName="Eashan";
-        lastName="Mahajan";
-        mySeatX=2;
-        mySeatY=5;
+    public VineelBhattiprolu() {
+        firstName="Vineel";
+        lastName="Bhattiprolu";
+        mySeatX=1;
+        mySeatY=1;
        // imgFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        portraitFile=firstName.toLowerCase()+ lastName.toLowerCase()+".jpg";
        standingFile=firstName.toLowerCase()+ lastName.toLowerCase()+"-standing.jpg";
@@ -52,7 +49,7 @@ public class EashanMahajan extends Student implements SpecialInterestOrHobby
     }
     
      /**
-     * Act - do whatever the EashanMahajan actor wants to do. This method is called whenever
+     * Act - do whatever the KilgoreTrout actor wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */   
     public void act() 
@@ -66,14 +63,13 @@ public class EashanMahajan extends Student implements SpecialInterestOrHobby
                 getName();
                 sayName(soundFile);
             
-                myHobby("I like to play videogames!");
+                myHobby("I like to play video games!");
             // Create a "special method for your class and put the call here.  You can twirl your image, resize it, move it around, change transparancy, or a 
             // combination of all of those types of actions, or more. Make sure to save the original image if you manipulate it, so that you can put it back.
             // Call the sitDown() method to move back  to your seat
             
-                circleClass();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
-                StudentDeskGroup desk = new StudentDeskGroup();
-                desk.peopleNames();
+                walkAround();  // Kilgore Trount's special method... Please write one of your own. You can use this, but please modify it and be creative.
+           
                 sitDown();
             }
         
@@ -94,32 +90,32 @@ public class EashanMahajan extends Student implements SpecialInterestOrHobby
 
    
     /**
-     * This is a local method specific to the EashanMahajan class used to animate the character once the image is clicked on.
+     * This is a local method specific to the KilgoreTrout class used to animate the character once the image is clicked on.
      * You should write your own methods to perform your own animation for your character/avatar.
      */
-    public void circleClass(){
+    public void walkAround(){
         setLocation(0,0);
-        Greenfoot.delay(10);
+         Greenfoot.delay(10);
+        // move back
+        for (int i=1;i<=11;i++){
+            setLocation(1,i);
+            Greenfoot.delay(10);
+        }   
         // move right
         for (int i=1;i<=9;i++){
-            setLocation(i,0);
+            setLocation(i,11);
             Greenfoot.delay(10);
         }
-        // move back
-        for (int i=1;i<=5;i++){
-            setLocation(9,i);
+        // move Forward
+        for (int i=9;i>=5;i--){
+            setLocation(10,i);
             Greenfoot.delay(10);
-        }      
+        }   
          // move left
-        for (int i=9;i>=0;i--){
+        for (int i=9;i>=3;i--){
             setLocation(i,5);
             Greenfoot.delay(10);
         }      
-              // move Forward
-        for (int i=5;i>=0;i--){
-            setLocation(0,i);
-            Greenfoot.delay(10);
-        }   
            Greenfoot.delay(20);
            returnToSeat();
     }
