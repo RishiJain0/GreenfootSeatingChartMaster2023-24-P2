@@ -153,6 +153,7 @@ public class Classroom extends World {
     KilgoreTrout kilgoretrout = new KilgoreTrout();
     addObject(kilgoretrout, 2, 3);
     kilgoretrout.assignSeat();
+
     TylerPrellwitz tylerprellwitz = new TylerPrellwitz();
     addObject(tylerprellwitz, 8, 10);
     tylerprellwitz.assignSeat();
@@ -171,6 +172,10 @@ public class Classroom extends World {
     EashanMahajan eashan = new EashanMahajan();
     addObject(eashan, 5, 7);
     eashan.assignSeat();
+    
+    AltaWan altawan = new AltaWan();
+    addObject(altawan,8,6);
+    altawan.assignSeat();
 
     GojoSatoru gojo = new GojoSatoru();
     addObject(gojo, 6, 7);
