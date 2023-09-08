@@ -153,6 +153,10 @@ public class Classroom extends World {
       KilgoreTrout kilgoretrout = new KilgoreTrout();
       addObject(kilgoretrout,2,3);
       kilgoretrout.assignSeat();
+  
+      HarshaVajrala harshavajrala = new HarshaVajrala();
+      addObject(harshavajrala,9,6);
+      harshavajrala.assignSeat();
     
       AyushiGhosh ayushighosh = new AyushiGhosh();
       addObject(ayushighosh, 3,3);
