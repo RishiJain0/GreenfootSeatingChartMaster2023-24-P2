@@ -104,7 +104,7 @@ public class Classroom extends World {
     StudentDesk studentdesk32 = new StudentDesk();
     addObject(studentdesk32, 6, 10);
     TeacherDesk teacherdesk = new TeacherDesk();
-    addObject(teacherdesk, 2, 10);
+    addObject(teacherdesk, 2, 9);
     studentdesk31.setDeskGroup(1);
     studentdesk29.setDeskGroup(1);
     studentdesk30.setDeskGroup(1);
@@ -153,24 +153,18 @@ public class Classroom extends World {
     KilgoreTrout kilgoretrout = new KilgoreTrout();
     addObject(kilgoretrout, 2, 3);
     kilgoretrout.assignSeat();
-    TylerPrellwitz tylerprellwitz = new TylerPrellwitz();
-    addObject(tylerprellwitz, 8, 10);
-    tylerprellwitz.assignSeat();
 
-    JadenDing jadending = new JadenDing();
-    addObject(jadending, 2, 6);
-    jadending.assignSeat();
+    HarshaVajrala harshavajrala = new HarshaVajrala();
+    addObject(harshavajrala, 9, 6);
+    harshavajrala.assignSeat();
 
-    RohanNihalani rohannihalani = new RohanNihalani();
-    addObject(rohannihalani, 5, 9);
-    rohannihalani.assignSeat();
+    AyushiGhosh ayushighosh = new AyushiGhosh();
+    addObject(ayushighosh, 3, 3);
+    ayushighosh.assignSeat();
 
-    GavinNgim gavinngim = new GavinNgim();
-    addObject(gavinngim, 6, 9);
-
-    EashanMahajan eashan = new EashanMahajan();
-    addObject(eashan, 5, 7);
-    eashan.assignSeat();
+    AltaWan altawan = new AltaWan();
+    addObject(altawan, 8, 6);
+    altawan.assignSeat();
 
     GojoSatoru gojo = new GojoSatoru();
     addObject(gojo, 6, 7);
@@ -183,6 +177,7 @@ public class Classroom extends World {
     FranklinLiu franklinLiu = new FranklinLiu();
     addObject(franklinLiu, 5, 6);
     franklinLiu.assignSeat();
+
     AryanJain aryanjain = new AryanJain();
     addObject(aryanjain, 6, 3);
     aryanjain.assignSeat();
@@ -202,6 +197,10 @@ public class Classroom extends World {
     GargAyush gargAyush = new GargAyush();
     addObject(gargAyush, 3, 4);
     gargAyush.assignSeat();
+
+    EashanMahajan eashan = new EashanMahajan();
+    addObject(eashan, 5, 7);
+    eashan.assignSeat();
 
     JiaAggarwal jia = new JiaAggarwal();
     addObject(jia, 2, 7);
@@ -230,5 +229,28 @@ public class Classroom extends World {
     MeganZhang meganZhang = new MeganZhang();
     addObject(meganZhang, 9, 4);
     meganZhang.assignSeat();
+
+    GavinNgim gavinngim = new GavinNgim();
+    addObject(gavinngim, 6, 9);
+
+    TylerPrellwitz tylerprellwitz = new TylerPrellwitz();
+    addObject(tylerprellwitz, 8, 10);
+    tylerprellwitz.assignSeat();
+
+    JadenDing jadending = new JadenDing();
+    addObject(jadending, 2, 6);
+    jadending.assignSeat();
+
+    RohanNihalani rohannihalani = new RohanNihalani();
+    addObject(rohannihalani, 5, 9);
+    rohannihalani.assignSeat();
+
+    Irene Irenep = new Irene();
+    addObject(Irenep, 5, 10);
+    Irenep.assignSeat();
+
+    MohitSureshChandar mohitsureshchandar = new MohitSureshChandar();
+    addObject(mohitsureshchandar, 8, 9);
+    mohitsureshchandar.assignSeat();
   }
 }
