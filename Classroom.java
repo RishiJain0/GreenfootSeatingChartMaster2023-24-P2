@@ -225,6 +225,10 @@ public class Classroom extends World {
     ConnorTK connorTK = new ConnorTK();
     addObject(connorTK, 8, 7);
     connorTK.assignSeat();
+    
+    MeganZhang meganZhang = new MeganZhang();
+    addObject(meganZhang, 9, 4);
+    meganZhang.assignSeat();
 
     GavinNgim gavinngim = new GavinNgim();
     addObject(gavinngim, 6, 9);
