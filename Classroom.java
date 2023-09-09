@@ -252,5 +252,8 @@ public class Classroom extends World {
     MohitSureshChandar mohitsureshchandar = new MohitSureshChandar();
     addObject(mohitsureshchandar, 8, 9);
     mohitsureshchandar.assignSeat();
+    
+    MeetingButton button7 = new MeetingButton(new Student[] {rocketuzarraga, connorTK, altawan, harshavajrala});
+    addObject(button7, 10, 7);
   }
 }

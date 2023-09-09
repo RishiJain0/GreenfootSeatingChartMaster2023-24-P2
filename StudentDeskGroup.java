@@ -46,4 +46,62 @@ public class StudentDeskGroup extends Actor
         System.out.println(person3Name + " " + person3Location);
         System.out.println(person4Name + " " + person4Location);
     }
+    
+    
+    public void amogusEject(Student[] tableMembers) 
+    {
+        // Pull a random student from the array to be ejected
+        int index = Greenfoot.getRandomNumber(tableMembers.length);
+        Student ejected = tableMembers[index];
+        
+        // Determine who in the group is impostor
+        int impostor = Greenfoot.getRandomNumber(tableMembers.length);
+        String ejectMsg;
+        
+        // Change ejection message to display whether or not the impostor was ejected
+        if (impostor == index) {
+            ejectMsg = ejected.firstName + " was the The Impostor";
+        } else {
+            ejectMsg = ejected.firstName + " was not the The Impostor";
+        }
+        
+        // Determine whether to send ejected student up or down
+        int direction;
+        if (ejected.getY() == 4 || ejected.getY() == 7 || ejected.getY() == 10) {
+            direction = 1;
+        } else {
+            direction = -1;
+        }
+        
+        // Play the button sound
+        Greenfoot.playSound("sounds/meeting.wav");
+        System.out.println("EMERGENCY MEETING");
+        Greenfoot.delay(75);
+        
+        // Eject the student, moving up or down accordingly and slowly fading away
+        int transparency = 170;
+        for (int i = 0; i < 3; i++) {
+            ejected.setLocation(ejected.getX(), ejected.getY()+direction);
+            ejected.getImage().setTransparency(transparency);
+            transparency -= 85;
+            Greenfoot.delay(10);
+        }
+        ejected.getImage().setTransparency(0);
+    
+        // Display the ejection message
+        Greenfoot.playSound("sounds/ejected.wav");
+        for (int i = 0; i < ejectMsg.length(); i++) {
+            System.out.print(ejectMsg.substring(i,i+1));
+            Greenfoot.delay(3);
+        }
+        System.out.println(".\n");
+        
+        // Return to seat and fade back
+        Greenfoot.delay(100);
+        ejected.returnToSeat();
+        for (int i = 0; i <= 255; i += 17) {
+            ejected.getImage().setTransparency(i);
+            Greenfoot.delay(2);
+        }
+    }
 }
